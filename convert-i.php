@@ -1,6 +1,6 @@
 <?php
-# @mysql_escape_string->@mysqli_real_escape_string,it's experimental
-# but exist some error,not for production
+# @mysql_escape_string->@mysqli_real_escape_string,it's experimental,
+# but exist some errors,not for production.
 #
 require_once('php-sql-parser.php');
 $parser=new PHPSQLParser();
