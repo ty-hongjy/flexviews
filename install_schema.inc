@@ -19,12 +19,11 @@
 
 SET SQL_MODE = STRICT_TRANS_TABLES;
 
-# for MySQL 8,
-set global local_infile=1
 CREATE DATABASE IF NOT EXISTS flexviews;
 
---CREATE USER 'flexviews@localhost' IDENTIFIED BY 'flexdemo';
+# for MySQL 8,
 CREATE USER 'flexviews'@'localhost' IDENTIFIED BY 'flexdemo';
+set global local_infile=1
 
 GRANT ALL
    ON flexviews.*
