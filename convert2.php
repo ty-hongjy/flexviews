@@ -29,14 +29,11 @@ function &get_commandline() {
 $params = get_commandline();
 $settings = false;
 if(empty($params['schema']) || empty($params['sql_file'])) {
-	die("usage: add_table.php --schema=<SCHEMA> --sql_file=<SQL FILE>\nWhere SCHEMA is the name of the database and sql_file is the name of the sql file\n");
+	die("usage: convert2.php --schema=<SCHEMA> --sql_file=<SQL FILE>\nWhere SCHEMA is the name of the database and sql_file is the name of the sql file\n");
 }
 
 $shcema = $params['schema'];
 $sql =file_get_contents($params['sql_file']);
-echo $sql;
-echo $shcema;
-
 
 $parser=new PHPSQLParser();
 process_sql($sql,$shcema);
